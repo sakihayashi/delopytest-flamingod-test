@@ -80,7 +80,7 @@ class Form extends React.Component {
                 className="Form--Input Form--InputText"
                 type="text"
                 placeholder="Firstname"
-                name="firstname"
+                name="name"
                 required
               />
               <span>Firstname</span>
@@ -122,7 +122,7 @@ class Form extends React.Component {
               className="Form--Input Form--InputText"
               type="email"
               placeholder="Email"
-              name="emailAddress"
+              name="email"
               required
             />
             <span>Email address</span>
@@ -160,10 +160,6 @@ class Form extends React.Component {
             />
             <span>Get news updates</span>
           </label>
-          <div
-            className="g-recaptcha"
-            data-sitekey="6LfKN3kUAAAAAGIM1CbXmaRZx3LIh_W2twn1tzkA"
-          />
           
           <input
             className="Button Form--SubmitButton"
