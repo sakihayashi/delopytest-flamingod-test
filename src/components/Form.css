@@ -224,3 +224,8 @@
   opacity: 1;
   transform: scale(1);
 }
+
+.recap{
+  height: 100px;
+  width: 300px;
+}

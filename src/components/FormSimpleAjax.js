@@ -160,7 +160,7 @@ class Form extends React.Component {
             />
             <span>Get news updates</span>
           </label>
-          <div data-netlify-recaptcha="true"></div>
+          <div className="recap" data-netlify-recaptcha="true"></div>
           <input
             className="Button Form--SubmitButton"
             type="submit"
