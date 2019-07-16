@@ -67,6 +67,7 @@ class Form extends React.Component {
           onSubmit={this.handleSubmit}
           netlify-honeypot="bot-field"
           data-netlify="true"
+          data-netlify-recaptcha="true"
         >
           <input type="hidden" name="form-name" value={name} />
           {this.state.alert && (
@@ -159,7 +160,7 @@ class Form extends React.Component {
             />
             <span>Get news updates</span>
           </label>
-      
+          <div data-netlify-recaptcha="true"></div>
           <input
             className="Button Form--SubmitButton"
             type="submit"
