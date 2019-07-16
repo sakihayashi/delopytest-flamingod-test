@@ -1,0 +1,47 @@
+.post-list{
+    list-style: none;
+    padding: 0 16px;
+}
+
+.post-list-item{
+    border-top: 0;
+    clear: both;
+    display: block;
+    padding: 16px 0;
+    border-top: 0.5px solid #eee;
+}
+
+.post-list-img{ 
+  width: 100px; 
+  height: 100px;
+  float: left;
+  object-fit: cover;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.post-list-text{
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+.post-list-desc{
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.font-kokoro{
+    font-family: 'モトヤLシーダ3等幅', sans-serif;
+    font-size: 1.3rem;
+    color: #fe8678;
+}
+
+a:link {
+    text-decoration: none;
+  }
+  

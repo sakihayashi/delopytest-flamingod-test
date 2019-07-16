@@ -1,0 +1,10 @@
+.Logo {
+  display: flex;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 5rem;
+  width: 5rem;
+  align-items: center;
+  justify-content: center;
+}
