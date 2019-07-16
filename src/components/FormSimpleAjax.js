@@ -8,7 +8,7 @@ import './Form.css'
 
 class Form extends React.Component {
   static defaultProps = {
-    name: 'contact',
+    name: 'hamster',
     subject: '', // optional subject of the notification email
     action: '',
     successMessage: 'Thanks for your enquiry, we will get back to you soon',
@@ -70,7 +70,7 @@ class Form extends React.Component {
           name={name}
           method="post"
         >
-          <input type="hidden" name="form-name" value={name} />
+          <input type="hidden" name="form-name" value={'hamster'} />
           {this.state.alert && (
             <div className="Form--Alert">{this.state.alert}</div>
           )}
