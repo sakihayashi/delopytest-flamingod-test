@@ -65,6 +65,7 @@ class Form extends React.Component {
           className="Form"
           name={name}
           onSubmit={this.handleSubmit}
+          netlify-honeypot="bot-field"
           data-netlify="true"
         >
           <input type="hidden" name="form-name" value={name} />
@@ -374,9 +375,9 @@ class Form extends React.Component {
   }
 }
 
-export default Form
+//export default Form
 
-*/
+// */
 
 
 /*
