@@ -69,8 +69,9 @@ class Form extends React.Component {
           className="Form"
           name={name}
           method="post"
+          data-netlify="true"
         >
-          <input type="hidden" name="form-name" value={'hamster'} />
+          <input type="hidden" name="form-name" value={name} />
           {this.state.alert && (
             <div className="Form--Alert">{this.state.alert}</div>
           )}
