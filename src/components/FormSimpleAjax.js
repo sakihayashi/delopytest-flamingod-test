@@ -72,6 +72,7 @@ class Form extends React.Component {
           {this.state.alert && (
             <div className="Form--Alert">{this.state.alert}</div>
           )}
+          <input type="hidden" name="bot-field" />
           <div className="Form--Group">
             <label className="Form--Label">
               <input
