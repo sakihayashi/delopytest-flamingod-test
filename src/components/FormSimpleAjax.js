@@ -29,7 +29,10 @@ class Form extends React.Component {
     const data = serialize(form)
     this.setState({ disabled: true })
     fetch(form.action + '?' + stringify(data), {
-      method: 'POST'
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
     })
       .then(res => {
         if (res.ok) {
@@ -65,6 +68,7 @@ class Form extends React.Component {
         <form
           className="Form"
           name={name}
+          method="POST"
           //action={action}
           //onSubmit={this.handleSubmit}
           data-netlify="true"
