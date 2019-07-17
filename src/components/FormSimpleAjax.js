@@ -26,11 +26,17 @@ class Form extends React.Component {
 
     const form = e.target
     const data = serialize(form)
+    console.log('form: ', form);
+    
+    console.log('data: ', data);
+    
     this.setState({ disabled: true })
     fetch(form.action + '?' + stringify(data), {
       method: 'POST'
     })
       .then(res => {
+        console.log('what is in res: ', res);
+        
         if (res.ok) {
           return res
         } else {
@@ -60,6 +66,13 @@ class Form extends React.Component {
       <Fragment>
         <Helmet>
         <script src="https://www.google.com/recaptcha/api.js?render=6LfhA64UAAAAAL8SMCsSPDD1Pw6lI_8avu2IBs9y"></script>
+        <script>
+          grecaptcha.ready(function() {
+              grecaptcha.execute('6LfhA64UAAAAAL8SMCsSPDD1Pw6lI_8avu2IBs9y', {action: ''}).then(function(token) {
+                
+              })
+          })
+        </script>
         </Helmet>
         <form
           className="Form"
