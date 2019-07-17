@@ -27,9 +27,9 @@ export const ContactPageTemplate = ({
       backgroundImage={featuredImage}
     />
     <section className="section Contact--Section1">
-      <div className="container Contact--Section1--Container">
-        <div>
-          <Content source={body} />
+      {/* <div className="container Contact--Section1--Container"> */}
+        {/* <div>
+          <Content source={body} /> */}
           {/* <div className="Contact--Details">
             {address && (
               <a
@@ -54,12 +54,13 @@ export const ContactPageTemplate = ({
               </a>
             )}
           </div> */}
-        </div>
+        {/* </div> */}
 
-        <div>
+        <center>
+          <strong>お問い合わせ</strong>
           <FormSimpleAjax name="newHamster" />
-        </div>
-      </div>
+        </center>
+      {/* </div> */}
     </section>
 
     {/* <GoogleMap locations={locations} /> */}

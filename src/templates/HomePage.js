@@ -11,16 +11,15 @@ import './HomePage.css'
 // Export Template for use in CMS preview
 export const HomePageTemplate = ({ title, subtitle, featuredImage, body, posts, postTechInfo, postGatsby }) => {
 
-  let postArray = posts.edges.map((post, index) => {
+  let postArray = posts.edges.map((post) => {
        
     return (
       <NewsDigest {...post}/>
-      // <NewsDigest {...post} key={index}/>
     )
   })
 
   
-  let postArrayGatsby = postGatsby.edges.map((post, index) => {
+  let postArrayGatsby = postGatsby.edges.map((post) => {
     
         return (
           <NewsDigest {...post}/>
@@ -29,7 +28,7 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body, posts, 
     
   })
 
-  let postArrayTechInfo = postTechInfo.edges.map((post, index) => {
+  let postArrayTechInfo = postTechInfo.edges.map((post) => {
        
         return (
           <NewsDigest {...post}/>

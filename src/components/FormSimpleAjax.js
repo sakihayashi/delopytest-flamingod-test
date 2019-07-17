@@ -194,7 +194,7 @@ class Form extends React.Component {
           <input
             className="Button Form--SubmitButton"
             type="submit"
-            value="お問い合わせ"
+            value="フォームを送信"
             disabled={this.state.disabled}
           />
         </form>
