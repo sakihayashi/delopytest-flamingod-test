@@ -6,7 +6,7 @@ import Recaptcha from 'react-google-recaptcha'
 
 import './Form.css'
 
-const RECAPTCHA_KEY = '6LfhA64UAAAAAL8SMCsSPDD1Pw6lI_8avu2IBs9y';
+const RECAPTCHA_KEY = '66LeiKq4UAAAAADU6Vctv_mfyPDGrg1Ze2tDfpHoB';
 
 function encode(data) {
   return Object.keys(data)
