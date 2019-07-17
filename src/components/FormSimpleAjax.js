@@ -84,13 +84,7 @@ class Form extends React.Component {
       <Fragment>
         <Helmet>
         <script src="https://www.google.com/recaptcha/api.js?render=6LfhA64UAAAAAL8SMCsSPDD1Pw6lI_8avu2IBs9y"></script>
-        <script>
-          grecaptcha.ready(function() {
-              grecaptcha.execute('6LfhA64UAAAAAL8SMCsSPDD1Pw6lI_8avu2IBs9y', {action: ''}).then(function(token) {
-                
-              })
-          })
-        </script>
+
         </Helmet>
         <form
           className="Form"
