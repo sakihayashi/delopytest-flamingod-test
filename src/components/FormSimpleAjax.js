@@ -79,21 +79,21 @@ class Form extends React.Component {
               <input
                 className="Form--Input Form--InputText"
                 type="text"
-                placeholder="Firstname"
-                name="firstname"
+                placeholder="氏名"
+                name="lastname"
                 required
               />
-              <span>Firstname</span>
+              <span>氏名</span>
             </label>
             <label className="Form--Label">
               <input
                 className="Form--Input Form--InputText"
                 type="text"
-                placeholder="Lastname"
-                name="lastname"
+                placeholder="名前"
+                name="firstname"
                 required
               />
-              <span>Lastname</span>
+              <span>名前</span>
             </label>
           </div>
           <fieldset>
@@ -105,7 +105,7 @@ class Form extends React.Component {
                 value="male"
                 defaultChecked
               />
-              <span>Male</span>
+              <span>男</span>
             </label>
             <label className="Form--Label Form--Radio">
               <input
@@ -114,7 +114,7 @@ class Form extends React.Component {
                 name="gender"
                 value="female"
               />
-              <span>Female</span>
+              <span>女</span>
             </label>
           </fieldset>
           <label className="Form--Label">
@@ -135,11 +135,11 @@ class Form extends React.Component {
               required
             >
               <option disabled hidden>
-                Type of Enquiry
+                質問項目
               </option>
-              <option>Need to know more</option>
-              <option>Found a bug</option>
-              <option>Want to say hello</option>
+              <option>サイトに関する意見と要望</option>
+              <option>バグをレポート</option>
+              <option>その他</option>
             </select>
           </label>
           <label className="Form--Label">
@@ -160,7 +160,7 @@ class Form extends React.Component {
             />
             <span>Get news updates</span>
           </label>
-          <div className="recap" data-netlify-recaptcha="true"></div>
+          <div data-netlify-recaptcha="true"></div>
           <input
             className="Button Form--SubmitButton"
             type="submit"
