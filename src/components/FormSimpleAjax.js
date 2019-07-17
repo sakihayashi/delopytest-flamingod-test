@@ -2,8 +2,17 @@ import React, { Fragment } from 'react'
 import Helmet from 'react-helmet'
 import { stringify } from 'qs'
 import { serialize } from 'dom-form-serializer'
+import Recaptcha from 'react-google-recaptcha'
 
 import './Form.css'
+
+const RECAPTCHA_KEY = '6LfhA64UAAAAAL8SMCsSPDD1Pw6lI_8avu2IBs9y';
+
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
 
 class Form extends React.Component {
   static defaultProps = {
@@ -20,6 +29,10 @@ class Form extends React.Component {
     disabled: false
   }
 
+  handleRecaptcha = value => {
+    this.setState({ "g-recaptcha-response": value });
+  };
+
   handleSubmit = e => {
     e.preventDefault()
     if (this.state.disabled) return
@@ -32,7 +45,12 @@ class Form extends React.Component {
     
     this.setState({ disabled: true })
     fetch(form.action + '?' + stringify(data), {
-      method: 'POST'
+      method: 'POST',
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...this.state
+      })
     })
       .then(res => {
         console.log('what is in res: ', res);
@@ -77,6 +95,7 @@ class Form extends React.Component {
         <form
           className="Form"
           name={name}
+          method="post"
           onSubmit={this.handleSubmit}
           netlify-honeypot="bot-field"
           data-netlify="true"
@@ -173,7 +192,11 @@ class Form extends React.Component {
             />
             <span>Get news updates</span>
           </label>
-          <div data-netlify-recaptcha="true"></div>
+          <Recaptcha
+            ref="recaptcha"
+            sitekey={RECAPTCHA_KEY}
+            onChange={this.handleRecaptcha}
+          />
           <input
             className="Button Form--SubmitButton"
             type="submit"
