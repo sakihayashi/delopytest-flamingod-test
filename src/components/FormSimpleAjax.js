@@ -19,9 +19,9 @@ class Form extends React.Component {
     name: 'newHamster',
     subject: '', // optional subject of the notification email
     action: '',
-    successMessage: 'Thanks for your enquiry, we will get back to you soon',
+    successMessage: 'メッセージが送信されました。お問い合わせいただきありがとうございます。',
     errorMessage:
-      'There is a problem, your message has not been sent, please try contacting us via email'
+      '何らかのトラブルによりメッセージが送信できませんでした。記述事項を確認の上、もう一度送信してください。'
   }
 
   state = {
@@ -194,7 +194,7 @@ class Form extends React.Component {
           <input
             className="Button Form--SubmitButton"
             type="submit"
-            value="フォームを送信"
+            value="送信"
             disabled={this.state.disabled}
           />
         </form>

@@ -44,13 +44,16 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body, posts, 
       backgroundImage={featuredImage}
     />
 
-    <section className="section">
+    {/* <section className="section">
       <div className="container">
         <Content source={body} />
       </div>
-    </section>
+    </section> */}
+
     <section className="section">
-      <div className="container">New ブログ
+      <div className="container">
+        <h3><strong>最新のアメリカのウェブプログラミングニュース＋ブログ</strong></h3><br />
+        New ブログ
       <ul className="post-list">{postArray}</ul>
       </div>
     </section>
